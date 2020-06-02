@@ -5,22 +5,231 @@ ul li{
     list-style-type: none;
     margin: 10px;
     font-size: 20px;
+    margin-right: 5px;
+    padding: 5px;
+    text-decoration: none;
 }
 ul{
     display: flex;
     float: right;
     margin-right: 10%;
-    margin-left: 25%;
+    
 }
 section{
     width: 100%;
     height: 100vh;
 }
+.img-container{
+    display: flex;
+    margin-right: 50%;
+    margin-left: 15%;
+}
+.img-container img{
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+}
+.img-container img:hover{
+    scale: 1.2;
+    transition: ease .3s;
+}
 nav{
     display: flex;
 }
-nav img{
-    width: 30px;
-    height: 30px;
-    margin: 20px;
+.home{
+    background-image: url("home-bg.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.home-container{
+    font-family: 'poppins-medium';
+    display: flex;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+.home-container img{
+    width: 20%;
+    height: 20%;
+    margin-left: 20%;
+    animation-name: animationI;
+    animation-duration: .8s;
+}
+.intro :nth-child(1){
+    font-family: 'poppins-medium';
+    margin: 0;
+    font-size: 20px;
+}
+.intro :nth-child(2){
+    font-family: 'poppins-medium';
+    font-size: 70px;
+    margin: 0;
+    color: rgb(10, 210, 245);
+}
+.intro :nth-child(3){
+    font-family: 'poppins-medium';
+    font-size: 30;
+}
+.intro :nth-child(4){
+    font-size: 24;
+    margin-top: 3%;
+}
+.intro{
+    width: 30%;
+    animation-name: animation;
+    animation-duration: .8s;
+}
+.get-start a{
+    color: black;
+    text-decoration: none;
+}
+.get-start{
+    width: 70%;
+    background-color: rgb(10, 210, 245);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    margin-top: 6%;
+    border-radius: 100px;
+    border: 1px solid rgb(10, 210, 245);
+}
+
+.get-start:hover{
+    background-color: transparent;
+    border: 1px solid rgb(10, 210, 245);
+    color: black;
+    transition: ease-in-out .4s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.about ,.education,.experience{
+    background-image: url("bg.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-top: 5%;
+}
+html{
+    scroll-behavior: smooth;
+}
+.about-title{
+    font-family: 'poppins-bold';
+    font-size: 60px;
+    margin-left: 15%;
+    
+}
+
+
+.con{
+    font-size: 26px;
+    font-family: 'poppins-medium';
+    width: 30%;
+    text-align: justify;
+    margin-left: 15%;
+    animation-name: animation;
+    animation-duration: .8s;
+}
+.con span{
+    font-size: 54px;
+    font-family: 'poppins-medium';
+    color: rgb(10, 210, 245);
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+}
+ul li a:hover{
+    text-decoration: none;
+    
+}
+ul li:hover{
+    background-color: rgb(10, 210, 245);
+    transition: ease-in-out .4s;
+    
+    border-radius: 50px;
+}
+.edu-con{
+    display: flex;
+    width: 50%;
+    margin-left: 15%;
+    flex-direction: column;
+    font-family: 'poppins-medium';
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.edu-inner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.present{
+    width: 25%;
+    
+    font-size: 28px;
+}
+.uni{
+    width: 50%;
+    font-size: 28px;
+    padding-left: 15px;
+    border-left: 3px solid rgb(144, 100, 202);
+}
+.experience{
+    font-family: 'poppins-medium';
+}
+.text{
+    margin-left: 15%;
+    width: 30%;
+    font-size: 28px;
+    text-align: justify;
+    margin-top: 20px;
+}
+.project-title{
+    font-family: 'poppins-medium';
+    font-size: 50px;
+    margin-left: 15%;
+    margin-top: 40px;
+}
+.edu-conE{
+    display: flex;
+    width: 65%;
+    margin-left: 15%;
+    flex-direction: column;
+    font-family: 'poppins-medium';
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.presentE{
+    width: 15%;
+    
+    font-size: 28px;
+}
+.uniE{
+    
+    font-size: 28px;
+    padding-left: 30px;
+    border-left: 3px solid rgb(144, 100, 202);
+}
+@keyframes animation{
+    from{
+        opacity: 0.1;
+        transform: translateY(50%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes animationI{
+    from{
+        opacity: 0.5;
+        transform: translateY(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
