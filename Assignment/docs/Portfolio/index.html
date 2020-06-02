@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
 
     <link rel="stylesheet" href="index.css">
     <title>Kyaw Zin Linn</title>
@@ -10,16 +10,71 @@
 <body>
     <section class="home">
         <nav class="container-fluid">
-            <img src="facebook.svg" alt="facebook">
-            <img src="instagram-sketched.svg" alt="Instagram">
-            <img src="email.svg" alt="Email">
+            <div class="img-container">
+                <a href="https://web.facebook.com/kyaw.z.linn.37266/"><img src="facebook.svg" alt="facebook"></a>
+                <img src="instagram-sketched.svg" alt="Instagram">
+                <img src="email.svg" alt="Email">
+            </div>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Education</li>
-                <li>Experience</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
             </ul>
         </nav>
+        <div class="home-container">
+            <div class="intro">
+                <p>Hi I'm</p>
+                <p>Kyaw Zin Linn</p>
+                <p>Android And Web Development</p>
+                <p>I'm third year student in UTYCC. I'm falling in love with HTML, JavaScript, Java, jQuery, Boostrap and Pthon.</p>
+                <div class="get-start"><a href="#about">Get Started</a></div>
+            </div>
+            <img src="me.png" alt="It's me.">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <p class="about-title">ABOUT</p>
+        <div class="con">
+            <p><span>My </span>Name is Kyaw Zin Linn and I'm third year student in UTYCC. I also develop android apps and website templates. And I'm interested in Graphic Designing. I want to be an expert software developer and UI/UX designer.</p>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <p class="about-title">EDUCATION</p>
+        <div class="edu-con">
+            <div class="edu-inner">
+                <div class="present">Present</div>
+                <div class="uni">University Of Technology<br>(Yatanarpon Cyber City)</div>
+            </div>
+        </div>
+        <div class="edu-con">
+            <div class="edu-inner">
+                <div class="present">High School</div>
+                <div class="uni">Family Private High School<br>(Mahlaing)</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience" id="experience">
+        <p class="about-title">EXPERIENCE</p>
+        <div class="text">
+            I developed android apps, web templates and a few projects in our university.
+        </div>
+        <p class="project-title">PROJECTS</p>
+        <div class="edu-conE">
+            <div class="edu-inner">
+                <div class="presentE">2020</div>
+                <div class="uniE">Covid-19 Info App(Still Developing)<br>Myanmar Tour Guide (Android App)</div>
+            </div>
+        </div>
+        <div class="edu-conE">
+            <div class="edu-inner">
+                <div class="presentE">2019</div>
+                <div class="uniE">Knowledge House (Android App)<br>Better Choice And Beyond (Web Design)</div>
+            </div>
+        </div>
     </section>
 </body>
 </html>
