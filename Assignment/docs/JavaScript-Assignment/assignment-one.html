@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Changing text color</title>
+    
+    <script>
+        function change(){document.addEventListener('DOMContentLoaded',()=>{
+            
+                var x = document.getElementById('value').textContent;
+                console.log(x);
+            
+        });}
+        function greet(val){
+            const h1 = document.querySelector("h1");
+            if(val=="black"){
+                h1.style.color = "black";
+            }
+            else if(val=="red"){
+                h1.style.color = "red";
+            }
+            else if(val=="green"){
+                h1.style.color = "green";
+            }
+            else{
+                h1.style.color="blue";
+            }
+            console.log(val);
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Hello! Welcome to Our PreIntern Group.</h1>
+    </div>
+    <select onchange="greet(this.value);" name="Color" id="color" class="container mx-auto d-block" style="width: 200px;">
+        <option id="value" value="black" data-color="black">Black</option>
+        <option id="value" value="red" data-color ="red">Red</option>
+        <option id="value" value="green" data-color="green">Green</option>
+        <option id="value" value="blue" data-color="blue">Blue</option>
+    </select>
+</body>
+</html>
