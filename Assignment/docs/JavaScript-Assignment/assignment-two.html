@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Todo List</title>
+    <script>
+        function getData(val){
+            if(val.length>0){
+                const submit = document.querySelector("#submit");
+                submit.classList.add("button");
+                submit.style.display = "block";
+            }
+            else{
+                const submit = document.querySelector("#submit");
+                
+                submit.style.display = "none";
+            }
+            
+        }
+        
+        function alertA(){
+            const li = document.createElement("li");
+            const value = document.getElementById("value").value;
+            document.getElementById("value").value = "";
+            console.log("hello"+value);
+            li.innerHTML = "<h4>"+value+"</h4>";
+            //li.classList.add("button");
+            if(value!=""){document.querySelector("#list").appendChild(li);}
+            else{
+                alert("You entered nothing!");
+            }
+        }
+    </script>
+    <style>
+        .button{
+            animation-name: animation;
+            animation-duration: 500ms;
+            animation-iteration-count: initial;
+        }
+
+        li{
+            border-left: 5px solid rgb(37, 161, 238);
+            padding-top: 10px;
+            background-color: rgb(241, 241, 241);
+            border-radius: 3px;
+            color: black;
+            padding-bottom: 10px;
+            list-style-type: none;
+            margin-top: 10px;
+            align-items: center;
+            justify-content: center;
+            animation: animation;
+            padding-left: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            animation-duration: 400ms;
+        }
+        li:hover{
+            background-color: rgba(161, 241, 233, 0.733);
+            transition: ease-in;
+            transition-duration: 400ms;
+        }
+        @keyframes animation{
+            from{
+                transform: translateY(50%);
+            }
+            to{
+                transform: translateY(1%);
+            }
+        }
+        
+    </style>
+</head>
+<body class="container">
+    <h1 class="text-center" style="font-weight: 700; color: rgb(37, 161, 238);">To Do List</h1>
+    <div class="form-group">
+      
+        <input type="text" oninput="getData(this.value)" name="" id="value" style="width: 40%; margin-right: 0;" class="form-control mx-auto d-block" placeholder="Enter Something..." aria-describedby="helpId">
+            <ul id="list" class="container mx-auto d-block" style="display: flex; width: 50%; margin-top: 50px;">
+
+            </ul>
+        </div>
+        <button type="submit" onclick="alertA()" class="btn btn-primary container" style="display: none; width: 10%; margin-top: 40px;" id="submit">Submit</button>
+        
+    </div>
+</body>
+</html>
